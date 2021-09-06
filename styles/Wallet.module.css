@@ -1,0 +1,23 @@
+.walletstatus {
+    padding: 16px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin-top: 16px;
+}
+
+.connectwallet {
+    transition: 0.2s;
+}
+
+.connectwallet:hover {
+    background-color: #555555;
+    border-color: #555555;
+    color: white;
+    cursor: pointer;
+}
