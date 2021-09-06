@@ -1,9 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useState } from 'react'
 import { Uploader } from '../components/Uploader'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+  const [file, setFile] = useState<File>()
+
+  const content = () => {
+    if (file === undefined) {
+      return (<Uploader onUploaded={(file) => setFile(file)} />)
+    }
+
+    return (<div>uploaded file: {file.name}</div>)
+  }
 
   return (
     <div className={styles.container}>
@@ -18,7 +28,8 @@ const Home: NextPage = () => {
           Mint an NFT
         </h1>
 
-        <Uploader/>
+
+        {content()}
       </main>
 
       <footer className={styles.footer}>

@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.dropzone {
+    opacity: 0.4;
+    border-color: white;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 12px;
+    text-align: center;
+    padding: 32px;
+}
